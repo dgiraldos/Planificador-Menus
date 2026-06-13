@@ -1,3 +1,24 @@
-<p>Planificador Menus</p>
+{% extends "pm_app/base.html" %}
 
-<p>Planificador Menus como su propio nombre indica te servirá de ayuda para planificarte lo que comerás a lo larga de la semana, teniendo en cuenta los platos que puedas tener.</p>
+{% block title %}
+Inicio
+{% endblock %}
+
+{% block content %}
+
+<h1>Planificador de Menús</h1>
+
+<div class="card">
+    <h2>Bienvenido</h2>
+
+    <p>
+        Organiza tus desayunos, comidas y cenas para toda la semana.
+    </p>
+
+    <p>
+        Utiliza el menú superior para consultar las comidas disponibles
+        o revisar tu planificación semanal.
+    </p>
+</div>
+
+{% endblock %}

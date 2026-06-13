@@ -1,0 +1,26 @@
+{% extends "pm_app/base.html" %}
+
+{% block title %}
+Comidas
+{% endblock %}
+
+{% block content %}
+
+<h1>Comidas disponibles</h1>
+
+{% for comida in comidas %}
+    <div class="card">
+        <h3>
+            <a href="{% url 'pm_app:comida' comida.id %}">
+                {{ comida.nombre }}
+            </a>
+        </h3>
+
+        <p>{{ comida.descripcion }}</p>
+    </div>
+
+{% empty %}
+    <p>No hay comidas registradas.</p>
+{% endfor %}
+
+{% endblock %}
